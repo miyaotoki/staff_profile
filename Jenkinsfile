@@ -7,7 +7,8 @@ pipeline{
 		stage('Deploy to Remote'){
 			steps{
 				//copy php for entire to apache folder
-				sh 'scp ${WORKSPACE}/* root@${staging_server}:D:/xampp7/htdocs/staff_profile/'
+				echo 'copy file to xampp folder'
+				//sh 'scp ${WORKSPACE}/* root@${staging_server}:D:/xampp7/htdocs/staff_profile/'
 			}
 		}
 	}
