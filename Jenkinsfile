@@ -11,7 +11,7 @@ pipeline{
 				echo "${app_folder}"
 				echo "${WORKSPACE}"
 				//sh 'scp ${WORKSPACE}/* root@${staging_server}:D:/xampp7/htdocs/staff_profile/'
-				bat 'xcopy ${WORKSPACE} ${app_folder} /E /I /H'
+				bat "xcopy ${WORKSPACE} ${app_folder} /E /I /H"
 			}
 		}
 	}
