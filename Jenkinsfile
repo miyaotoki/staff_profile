@@ -1,7 +1,7 @@
 pipeline{
 	agent any
 	environment{
-		app_folder="D:\xampp7\htdocs\staff_profile"
+		app_folder="D:\\xampp7\\htdocs\\staff_profile"
 	}
 	stages{
 		stage('Deploy to Remote'){
