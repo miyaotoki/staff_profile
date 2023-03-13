@@ -10,7 +10,7 @@ pipeline{
 				echo 'copy file to xampp folder'
 				echo "${app_folder}"
 				//sh 'scp ${WORKSPACE}/* root@${staging_server}:D:/xampp7/htdocs/staff_profile/'
-				sh 'xcopy ${WORKSPACE} ${app_folder}'
+				sh 'xcopy ${WORKSPACE} ${app_folder} /E /I /H'
 			}
 		}
 	}
