@@ -8,7 +8,7 @@ pipeline{
 			steps{
 				//copy php for entire to apache folder
 				echo 'copy file to xampp folder'
-				echo "${WORKSPACE}"
+				echo "${app_folder}"
 				//sh 'scp ${WORKSPACE}/* root@${staging_server}:D:/xampp7/htdocs/staff_profile/'
 				sh 'xcopy ${WORKSPACE} ${app_folder}'
 			}
