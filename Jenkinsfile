@@ -1,7 +1,7 @@
 pipeline{
 	agent any
 	environment{
-		staging_server="localhost"
+		app_folder="D:/xampp7/htdocs/staff_profile/"
 	}
 	stages{
 		stage('Deploy to Remote'){
@@ -9,7 +9,7 @@ pipeline{
 				//copy php for entire to apache folder
 				echo 'copy file to xampp folder'
 				//sh 'scp ${WORKSPACE}/* root@${staging_server}:D:/xampp7/htdocs/staff_profile/'
-				sh 'xcopy ${WORKSPACE} D:/xampp7/htdocs/staff_profile/'
+				sh 'xcopy ${WORKSPACE} ${app_folder}'
 			}
 		}
 	}
